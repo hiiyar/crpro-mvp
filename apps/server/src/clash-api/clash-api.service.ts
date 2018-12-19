@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import axios, { AxiosInstance } from 'axios';
 import { API_KEY } from '../config/api';
-import { Card } from '../types/card';
-import { Player } from '../types/player';
-import { Tournament } from '../types/tournament';
+import { Card } from '@crpro/types/card';
+import { Player } from '@crpro/types/player';
+import { Tournament } from '@crpro/types/tournament';
 const querystring = require('querystring');
 
 @Injectable()
