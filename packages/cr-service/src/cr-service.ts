@@ -1,22 +1,18 @@
-import { Injectable } from '@nestjs/common';
-import axios, { AxiosInstance } from 'axios';
-import { API_KEY } from '../config/api';
-import { Card } from '@crpro/types/card';
-import { Player } from '@crpro/types/player';
-import { Tournament } from '@crpro/types/tournament';
-const querystring = require('querystring');
+import axios, { AxiosInstance } from "axios";
+import { API_KEY } from "@crpro/config";
+import { Card, Player, Tournament, TournamentQuery } from "@crpro/types";
+const querystring = require("querystring");
 
-@Injectable()
 export class ClashApiService {
   instance: AxiosInstance = axios.create({
-    baseURL: 'https://api.clashroyale.com/v1/',
+    baseURL: "https://api.clashroyale.com/v1/",
     headers: {
-      authorization: `Bearer ${API_KEY}`,
-    },
+      authorization: `Bearer ${API_KEY}`
+    }
   });
   async getCards(): Promise<Card[]> {
     return await this.instance
-      .get('cards')
+      .get("cards")
       .then(r => {
         return r.data.items as Card[];
       })
@@ -34,7 +30,7 @@ export class ClashApiService {
         return null;
       });
   }
-  async getTournaments(query: any): Promise<Tournament[]> {
+  async getTournaments(query: TournamentQuery): Promise<Tournament[]> {
     console.log(query);
     return this.instance
       .get(`tournaments?${querystring.stringify(query)}`)

@@ -1,12 +1,10 @@
 import { Controller, Get, Param, Query, Request } from '@nestjs/common';
-import { ClashApiService } from '../clash-api/clash-api.service';
-import { Card } from 'src/types/card';
-import { Player } from 'src/types/player';
-import { Tournament } from 'src/types/tournament';
+import { ItemsService } from './items.service';
+import { Card, Player, Tournament } from '@crpro/types';
 
 @Controller('items')
 export class ItemsController {
-  constructor(private readonly clashApiService: ClashApiService) {}
+  constructor(private readonly clashApiService: ItemsService) {}
   @Get()
   getIndex(): string {
     return 'Items would be here!';

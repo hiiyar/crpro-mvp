@@ -1,11 +1,11 @@
 {
-  "name": "@crpro/types",
+  "name": "@crpro/cr-service",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "Zeeh <zeehtecnologia@gmail.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/types.js",
+  "main": "lib/cr-service.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -16,5 +16,8 @@
   "scripts": {
     "tsc": "tsc",
     "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
   }
 }

@@ -4,8 +4,16 @@
   "description": "",
   "license": "ISC",
   "private": true,
+  "scripts": {
+    "server:dev": "cd apps/server && yarn start:dev",
+    "lerna:test": "yarn lerna run --parallel --stream start:dev"
+  },
   "workspaces": [
-    "packages/*",
-    "apps/*"
-  ]
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^10.12.18",
+    "lerna": "^3.7.1",
+    "typescript": "^3.2.2"
+  }
 }
