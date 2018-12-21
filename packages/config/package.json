@@ -16,5 +16,11 @@
   "scripts": {
     "tsc": "tsc",
     "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^6.2.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.0"
   }
 }

@@ -1,2 +1,5 @@
-export const API_KEY =
-  "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImYwMTE4OWFiLWNjZDctNDVhYS1hZmIwLWNiMzZkMTkxYTA4OSIsImlhdCI6MTU0NTM0ODE3Niwic3ViIjoiZGV2ZWxvcGVyLzE1NDJmMGZiLTNlOGUtYTdkMi1iOTNmLWU4MDRhYWZmMzM5YiIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIxNjguMTgxLjQ4LjUiXSwidHlwZSI6ImNsaWVudCJ9XX0.PRrRczLyUANEMqH81_shhidiKcbIGYStnWL3D_JKiSoVTw5ZZT5BoDwsY_09d8nWVXYajw5auT3FwNgC0rkJVg";
+import * as dotenv from "dotenv";
+
+dotenv.config({ path: __dirname + "/../../../.env" });
+
+export const API_KEY = process.env.API_KEY;
