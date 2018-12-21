@@ -5,6 +5,7 @@
   "license": "ISC",
   "private": true,
   "scripts": {
+    "initial-config": "lerna bootstrap && lerna run tsc && cd apps/server && yarn",
     "server:dev": "cd apps/server && yarn start:dev",
     "lerna:test": "yarn lerna run --parallel --stream start:dev"
   },

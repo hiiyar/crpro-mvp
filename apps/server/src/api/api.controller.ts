@@ -1,13 +1,13 @@
 import { Controller, Get, Param, Query, Request } from '@nestjs/common';
-import { ItemsService } from './items.service';
+import { ApiService } from './api.service';
 import { Card, Player, Tournament } from '@crpro/types';
 
-@Controller('items')
-export class ItemsController {
-  constructor(private readonly clashApiService: ItemsService) {}
+@Controller('api')
+export class ApiController {
+  constructor(private readonly clashApiService: ApiService) {}
   @Get()
   getIndex(): string {
-    return 'Items would be here!';
+    return 'API would be here!';
   }
   @Get('/cards')
   async getCards(): Promise<Card[]> {
@@ -23,7 +23,7 @@ export class ItemsController {
     @Request() req,
     @Param('tag') tag?: string,
   ): Promise<Tournament | Tournament[]> {
-    console.log('req:', req.path);
+    // console.log('req:', req.path);
     if (tag) {
       return await this.clashApiService.getTournamentByTag(tag);
     }
