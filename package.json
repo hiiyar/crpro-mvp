@@ -7,7 +7,8 @@
   "scripts": {
     "initial-config": "lerna bootstrap && lerna run tsc && cd apps/server && yarn",
     "server:dev": "cd apps/server && yarn start:dev",
-    "lerna:test": "yarn lerna run --parallel --stream start:dev"
+    "lerna:test": "yarn lerna run --parallel --stream start:dev",
+    "full-prepare": "lerna bootstrap && tsc -b packages/types packages/config packages/cr-service packages/db && cd apps/server && yarn"
   },
   "workspaces": [
     "packages/*"
