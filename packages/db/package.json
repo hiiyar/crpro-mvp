@@ -1,0 +1,32 @@
+{
+  "name": "@crpro/db",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Zeeh <zeehtecnologia@gmail.com>",
+  "homepage": "https://github.com/hiiyar/crpro-mvp#readme",
+  "license": "ISC",
+  "main": "lib/db.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiiyar/crpro-mvp.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/hiiyar/crpro-mvp/issues"
+  },
+  "dependencies": {
+    "elasticsearch": "^15.2.0"
+  },
+  "devDependencies": {
+    "@types/elasticsearch": "^5.0.29"
+  }
+}
